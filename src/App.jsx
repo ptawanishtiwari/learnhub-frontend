@@ -11,6 +11,7 @@ import Header from "./components/Navbar/Header";
 // import Login from "./pages/Login";
 import Register from "./components/pages/Register";
 import Customers from "./components/pages/Customers";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -24,9 +25,11 @@ function App() {
                
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/login" element={<Login />} /> */}
-                 <Route path="/courses" element={<Customers />} />
+                <Route path="/courses" element={<Customers />} />
                 <Route path="/register" element={<Register />} />
             </Routes>
+
+            <Footer />
 
         </BrowserRouter>
     );
