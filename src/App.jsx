@@ -10,6 +10,7 @@ import Header from "./components/Navbar/Header";
 // import Blog from "./pages/Blog";
 // import Login from "./pages/Login";
 import Register from "./components/pages/Register";
+import Customers from "./components/pages/Customers";
 
 function App() {
     return (
@@ -20,9 +21,10 @@ function App() {
             <Routes>
                 {/* <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/courses" element={<Courses />} />
+               
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/login" element={<Login />} /> */}
+                 <Route path="/courses" element={<Customers />} />
                 <Route path="/register" element={<Register />} />
             </Routes>
 
