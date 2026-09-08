@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Navbar/Header";
 
-// import Home from "./pages/Home";
+import Home from "./components/pages/Home";
 // import About from "./pages/About";
 // import Courses from "./pages/Courses";
 // import Blog from "./pages/Blog";
@@ -20,7 +20,8 @@ function App() {
             <Header />
 
             <Routes>
-                {/* <Route path="/" element={<Home />} />
+               <Route path="/" element={<Home />} />
+                {/* 
                 <Route path="/about" element={<About />} />
                
                 <Route path="/blog" element={<Blog />} />
