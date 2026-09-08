@@ -59,7 +59,8 @@ function Register() {
 
             // Send data to Spring Boot
             const response = await fetch(
-                "http://localhost:8080/customer/create",
+                // "http://localhost:8080/customer/create",
+                 "https://learnhub-backend-production-9e84.up.railway.app/customer/create",
                 {
                     method: "POST",
 
