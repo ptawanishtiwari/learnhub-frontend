@@ -1,56 +1,82 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Footer.css";
 
 function Footer() {
     return (
-        <footer className="bg-dark text-white pt-5 pb-3 mt-5">
+        <footer className="future-footer">
 
-            <div className="container">
+            {/* Background Effects */}
+            <div className="footer-grid"></div>
+            <div className="footer-glow footer-glow-1"></div>
+            <div className="footer-glow footer-glow-2"></div>
 
-                <div className="row">
+            <div className="container position-relative">
 
-                    {/* Brand Section */}
-                    <div className="col-lg-4 col-md-6 mb-4">
+                {/* Top CTA */}
+                <div className="footer-cta">
 
-                        <h3 className="fw-bold text-primary">
-                            LearnHub
-                        </h3>
+                    <div>
+                        <span className="footer-badge">
+                            <i className="bi bi-stars"></i>
+                            AI POWERED LEARNING
+                        </span>
 
-                        <p className="text-light mt-3">
-                            Learn new skills, build amazing projects,
-                            and grow your career with LearnHub.
+                        <h2>
+                            Build Your Future
+                            <span> With LearnHub.</span>
+                        </h2>
+
+                        <p>
+                            Learn modern technologies, build real projects,
+                            and become industry ready.
+                        </p>
+                    </div>
+
+                    <Link to="/courses" className="footer-cta-btn">
+                        Explore Courses
+                        <i className="bi bi-arrow-up-right"></i>
+                    </Link>
+
+                </div>
+
+
+                {/* Footer Main */}
+                <div className="row footer-main">
+
+                    {/* Brand */}
+                    <div className="col-lg-4 col-md-6 mb-5">
+
+                        <Link to="/" className="footer-logo">
+                            <span className="footer-logo-icon">
+                                <i className="bi bi-stars"></i>
+                            </span>
+
+                            Learn<span>Hub</span>
+                        </Link>
+
+                        <p className="footer-description">
+                            A futuristic learning platform designed to help
+                            students master technology, build real-world
+                            projects, and grow their careers.
                         </p>
 
-                        <div className="d-flex gap-3 mt-3">
+                        {/* Social */}
+                        <div className="footer-socials">
 
-                            <a
-                                href="#"
-                                className="text-white fs-5"
-                                aria-label="Facebook"
-                            >
+                            <a href="#" aria-label="Facebook">
                                 <i className="bi bi-facebook"></i>
                             </a>
 
-                            <a
-                                href="#"
-                                className="text-white fs-5"
-                                aria-label="Instagram"
-                            >
+                            <a href="#" aria-label="Instagram">
                                 <i className="bi bi-instagram"></i>
                             </a>
 
-                            <a
-                                href="#"
-                                className="text-white fs-5"
-                                aria-label="LinkedIn"
-                            >
+                            <a href="#" aria-label="LinkedIn">
                                 <i className="bi bi-linkedin"></i>
                             </a>
 
-                            <a
-                                href="#"
-                                className="text-white fs-5"
-                                aria-label="GitHub"
-                            >
+                            <a href="#" aria-label="GitHub">
                                 <i className="bi bi-github"></i>
                             </a>
 
@@ -60,48 +86,40 @@ function Footer() {
 
 
                     {/* Quick Links */}
-                    <div className="col-lg-2 col-md-6 mb-4">
+                    <div className="col-lg-2 col-md-6 mb-5">
 
-                        <h5 className="fw-bold mb-3">
-                            Quick Links
+                        <h5 className="footer-heading">
+                            Platform
                         </h5>
 
-                        <ul className="list-unstyled">
+                        <ul className="footer-links">
 
-                            <li className="mb-2">
-                                <a
-                                    href="/"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/">
+                                    <i className="bi bi-chevron-right"></i>
                                     Home
-                                </a>
+                                </Link>
                             </li>
 
-                            <li className="mb-2">
-                                <a
-                                    href="/about"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/about">
+                                    <i className="bi bi-chevron-right"></i>
                                     About
-                                </a>
+                                </Link>
                             </li>
 
-                            <li className="mb-2">
-                                <a
-                                    href="/courses"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/courses">
+                                    <i className="bi bi-chevron-right"></i>
                                     Courses
-                                </a>
+                                </Link>
                             </li>
 
-                            <li className="mb-2">
-                                <a
-                                    href="/blog"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/blog">
+                                    <i className="bi bi-chevron-right"></i>
                                     Blog
-                                </a>
+                                </Link>
                             </li>
 
                         </ul>
@@ -110,48 +128,40 @@ function Footer() {
 
 
                     {/* Courses */}
-                    <div className="col-lg-3 col-md-6 mb-4">
+                    <div className="col-lg-3 col-md-6 mb-5">
 
-                        <h5 className="fw-bold mb-3">
+                        <h5 className="footer-heading">
                             Popular Courses
                         </h5>
 
-                        <ul className="list-unstyled">
+                        <ul className="footer-links">
 
-                            <li className="mb-2">
-                                <a
-                                    href="#"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/courses">
+                                    <i className="bi bi-chevron-right"></i>
                                     Java Full Stack
-                                </a>
+                                </Link>
                             </li>
 
-                            <li className="mb-2">
-                                <a
-                                    href="#"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/courses">
+                                    <i className="bi bi-chevron-right"></i>
                                     MERN Stack
-                                </a>
+                                </Link>
                             </li>
 
-                            <li className="mb-2">
-                                <a
-                                    href="#"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/courses">
+                                    <i className="bi bi-chevron-right"></i>
                                     Python & AI
-                                </a>
+                                </Link>
                             </li>
 
-                            <li className="mb-2">
-                                <a
-                                    href="#"
-                                    className="text-light text-decoration-none"
-                                >
+                            <li>
+                                <Link to="/courses">
+                                    <i className="bi bi-chevron-right"></i>
                                     Web Development
-                                </a>
+                                </Link>
                             </li>
 
                         </ul>
@@ -160,64 +170,72 @@ function Footer() {
 
 
                     {/* Contact */}
-                    <div className="col-lg-3 col-md-6 mb-4">
+                    <div className="col-lg-3 col-md-6 mb-5">
 
-                        <h5 className="fw-bold mb-3">
-                            Contact Us
+                        <h5 className="footer-heading">
+                            Connect With Us
                         </h5>
 
-                        <p className="mb-2">
-                            <i className="bi bi-envelope me-2"></i>
-                            support@learnhub.com
-                        </p>
+                        <div className="footer-contact">
 
-                        <p className="mb-2">
-                            <i className="bi bi-telephone me-2"></i>
-                            +91 98765 43210
-                        </p>
+                            <div className="contact-item">
+                                <span>
+                                    <i className="bi bi-envelope"></i>
+                                </span>
 
-                        <p className="mb-2">
-                            <i className="bi bi-geo-alt me-2"></i>
-                            Lucknow, Uttar Pradesh, India
-                        </p>
+                                <div>
+                                    <small>Email</small>
+                                    <p>support@learnhub.com</p>
+                                </div>
+                            </div>
+
+
+                            <div className="contact-item">
+                                <span>
+                                    <i className="bi bi-telephone"></i>
+                                </span>
+
+                                <div>
+                                    <small>Phone</small>
+                                    <p>+91 98765 43210</p>
+                                </div>
+                            </div>
+
+
+                            <div className="contact-item">
+                                <span>
+                                    <i className="bi bi-geo-alt"></i>
+                                </span>
+
+                                <div>
+                                    <small>Location</small>
+                                    <p>Lucknow, Uttar Pradesh</p>
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div>
 
                 </div>
 
 
-                {/* Divider */}
-                <hr className="border-secondary" />
+                {/* Bottom */}
+                <div className="footer-bottom">
 
+                    <p>
+                        © {new Date().getFullYear()} LearnHub.
+                        All Rights Reserved.
+                    </p>
 
-                {/* Bottom Footer */}
-                <div className="row align-items-center">
-
-                    <div className="col-md-6 text-center text-md-start">
-
-                        <p className="mb-0 text-secondary">
-                            © {new Date().getFullYear()} LearnHub.
-                            All Rights Reserved.
-                        </p>
-
-                    </div>
-
-                    <div className="col-md-6 text-center text-md-end mt-2 mt-md-0">
-
-                        <a
-                            href="/privacy"
-                            className="text-secondary text-decoration-none me-3"
-                        >
+                    <div>
+                        <Link to="/privacy">
                             Privacy Policy
-                        </a>
+                        </Link>
 
-                        <a
-                            href="/terms"
-                            className="text-secondary text-decoration-none"
-                        >
+                        <Link to="/terms">
                             Terms & Conditions
-                        </a>
-
+                        </Link>
                     </div>
 
                 </div>

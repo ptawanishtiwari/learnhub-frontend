@@ -1,20 +1,32 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <nav className="future-navbar navbar navbar-expand-lg">
+
             <div className="container">
 
-                {/* Logo / Brand */}
-                <Link className="navbar-brand fw-bold fs-4" to="/">
-                    LearnHub
+                {/* LOGO */}
+                <Link
+                    className="navbar-brand future-logo"
+                    to="/"
+                >
+                    <span className="logo-icon">
+                        <i className="bi bi-stars"></i>
+                    </span>
+
+                    <span>
+                        Learn<span>Hub</span>
+                    </span>
                 </Link>
 
-                {/* Mobile Toggle Button */}
+
+                {/* MOBILE BUTTON */}
                 <button
-                    className="navbar-toggler"
+                    className="navbar-toggler future-toggler"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarContent"
@@ -22,64 +34,97 @@ function Header() {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
 
-                {/* Navbar Content */}
-                <div className="collapse navbar-collapse" id="navbarContent">
 
-                    {/* Left Menu */}
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                {/* NAVIGATION */}
+                <div
+                    className="collapse navbar-collapse"
+                    id="navbarContent"
+                >
+
+                    <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
 
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">
+                            <Link
+                                className="nav-link future-nav-link"
+                                to="/"
+                            >
                                 Home
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about">
+                            <Link
+                                className="nav-link future-nav-link"
+                                to="/about"
+                            >
                                 About
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link" to="/courses">
+                            <Link
+                                className="nav-link future-nav-link"
+                                to="/courses"
+                            >
                                 Courses
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link className="nav-link" to="/blog">
+                            <Link
+                                className="nav-link future-nav-link"
+                                to="/blog"
+                            >
                                 Blog
                             </Link>
                         </li>
 
                     </ul>
 
-                    {/* Right Side Buttons */}
-                    <div className="d-flex gap-2">
 
+                    {/* RIGHT SIDE */}
+                    <div className="future-actions">
+
+                        {/* AI */}
+                        <Link
+                            to="/dashboard"
+                            className="ai-nav-button"
+                        >
+                            <i className="bi bi-stars"></i>
+                            AI
+                        </Link>
+
+                        {/* LOGIN */}
                         <Link
                             to="/login"
-                            className="btn btn-outline-light"
+                            className="login-button"
                         >
                             Login
                         </Link>
 
+                        {/* REGISTER */}
                         <Link
                             to="/register"
-                            className="btn btn-light text-primary fw-semibold"
+                            className="register-button"
                         >
-                            Register
+                            Get Started
+                            <i className="bi bi-arrow-up-right ms-1"></i>
                         </Link>
 
                     </div>
 
                 </div>
+
             </div>
+
         </nav>
     );
 }
 
 export default Header;
+
